@@ -40,3 +40,24 @@ def solution(video_len, pos, op_start, op_end, commands):
     answer = f'{pos//60:02}:{pos%60:02}'
     
     return answer
+
+video_len = "34:33"
+pos = "13:00"
+op_start = "00:55"
+op_end = "02:55"
+commands = ["next", "prev"]
+print(solution(video_len, pos, op_start, op_end, commands)) # "13:00"
+
+video_len = "10:55"
+pos = "00:05"
+op_start = "00:15"
+op_end = "06:55"
+commands = ["prev", "next", "next"]
+print(solution(video_len, pos, op_start, op_end, commands)) # "06:55"
+
+video_len = "07:22"
+pos = "04:05"
+op_start = "00:15"
+op_end = "04:07"
+commands = ["next"]
+print(solution(video_len, pos, op_start, op_end, commands)) # "04:17"
