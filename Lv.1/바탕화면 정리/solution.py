@@ -1,6 +1,8 @@
-def solution(wallpaper):
-    answer = []
+# https://school.programmers.co.kr/learn/courses/30/lessons/161990
 
+# param : wallpaper - 바탕화면 좌표
+
+def solution(wallpaper):
     wallpaper = [[j for j in i] for i in wallpaper]
 
     tmp = []
@@ -12,10 +14,8 @@ def solution(wallpaper):
 
     lux, luy = min(row[0] for row in tmp), min(row[1] for row in tmp)
     rdx, rdy = max(row[0] for row in tmp) + 1, max(row[1] for row in tmp) + 1
-
-    print(lux, luy, rdx, rdy)
-
-    return answer
+    
+    return [lux, luy, rdx, rdy]
 
 wallpaper = [".#...", "..#..", "...#."]	
 print(solution(wallpaper)) # [0, 1, 3, 4]
